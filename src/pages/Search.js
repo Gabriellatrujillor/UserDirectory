@@ -28,6 +28,26 @@ class Search extends Component {
     console.log(this.state.employeeArray.sort());
   };
 
+  searchImage = () => {
+    console.log("inside image function"
+    );
+
+  };
+
+  searchDob = () => {
+    console.log("inside DOB function"
+    );
+
+  };
+
+  searchPhone = () => {
+    console.log("inside phone function")
+  }
+  searchEmail  = () => {
+    console.log("inside email function")
+  }
+
+
   handleInputChange = (event) => {
     this.setState({ search: event.target.value });
   };
@@ -62,6 +82,10 @@ class Search extends Component {
           />
 
           <EmployeeSearchResults
+          searchDob={this.searchDob}
+            searchEmail={this.searchEmail}
+          searchPhone={this.searchPhone}
+          searchImage={this.searchImage}
             searchName={this.searchName}
             results={this.state.employeeArray}
           />

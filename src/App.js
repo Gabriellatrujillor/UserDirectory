@@ -7,9 +7,7 @@ function App() {
   return (
     <Router>
       <div>
-
         <Wrapper>
-          
           <Route exact path="/" component={Search} />
         </Wrapper>
       </div>
