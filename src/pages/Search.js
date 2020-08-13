@@ -82,10 +82,10 @@ class Search extends Component {
           />
 
           <EmployeeSearchResults
-          searchDob={this.searchDob}
+           searchDob={this.searchDob}
             searchEmail={this.searchEmail}
-          searchPhone={this.searchPhone}
-          searchImage={this.searchImage}
+           searchPhone={this.searchPhone}
+           searchImage={this.searchImage}
             searchName={this.searchName}
             results={this.state.employeeArray}
           />

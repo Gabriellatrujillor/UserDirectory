@@ -1,3 +1,13 @@
 ul.search-results img {
   margin: 0 auto;
 }
+
+.profileArea{
+  border:0px !important;
+
+}
+
+ .btn-group{
+  /* display: !important; */
+  padding-bottom:15px !important;
+} 
