@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import API from "../utils/API";
 import Container from "../components/Container";
 import SearchForm from "../components/SearchForm";
+import SearchResults from "../components/SearchResults";
 import EmployeeSearchResults from "../components/EmployeeSearchResults";
 import Alert from "../components/Alert";
 
@@ -19,14 +20,18 @@ class Search extends Component {
     API.getEmployee().then((employeeResult) =>
       this.setState({ employeeArray: employeeResult.data.results })
     );
-    // API.getBaseBreedsList()
-    //   .then((res) => this.setState({ breeds: res.data.message }))
-    //   .catch((err) => console.log(err));
+    API.getBaseBreedsList()
+      .then((res) => this.setState({ breeds: res.data.message }))
+      .catch((err) => console.log(err));
   }
 
   searchName = () => {
     console.log(this.state.employeeArray.sort());
   };
+
+  findPerson =() =>{
+    console.log("finding person.. NOT FINISHED DOES NOT WORK");
+  }
 
   searchImage = () => {
     console.log("inside image function"
@@ -76,10 +81,12 @@ class Search extends Component {
           </Alert>
 
           <SearchForm
+            findPerson={this.findPerson}
             handleFormSubmit={this.handleFormSubmit}
             handleInputChange={this.handleInputChange}
             breeds={this.state.breeds}
           />
+           <SearchResults results={this.state.results} />
 
           <EmployeeSearchResults
            searchDob={this.searchDob}
