@@ -18,7 +18,6 @@ function App() {
           <Route exact path="/discover" component={Discover} />
           <Route exact path="/search" component={Search} />
         </Wrapper>
-        <Footer />
       </div>
     </Router>
   );
