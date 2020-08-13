@@ -25,7 +25,7 @@ class Search extends Component {
   }
 
   searchName = () => {
-    console.log(this.state.employeeArray.name.sort());
+    console.log(this.state.employeeArray.sort());
   };
 
   handleInputChange = (event) => {
